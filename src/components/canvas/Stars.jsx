@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 import ErrorBoundary from "../ErrorBoundary";
+import SafeCanvas from "./SafeCanvas";
 
 const Stars = (props) => {
   const ref = useRef();
@@ -31,15 +32,17 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
-      <ErrorBoundary fallback={<div className="w-full h-full" />}>
-        <Canvas camera={{ position: [0, 0, 1] }}>
-          <Suspense fallback={null}>
-            <Stars />
-          </Suspense>
+      <SafeCanvas fallback={<div className="w-full h-full" />}>
+        <ErrorBoundary fallback={<div className="w-full h-full" />}>
+          <Canvas camera={{ position: [0, 0, 1] }}>
+            <Suspense fallback={null}>
+              <Stars />
+            </Suspense>
 
-          <Preload all />
-        </Canvas>
-      </ErrorBoundary>
+            <Preload all />
+          </Canvas>
+        </ErrorBoundary>
+      </SafeCanvas>
     </div>
   );
 };

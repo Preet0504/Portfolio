@@ -4,6 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 import ErrorBoundary from "../ErrorBoundary";
+import SafeCanvas from "./SafeCanvas";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
@@ -65,26 +66,28 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <ErrorBoundary fallback={<div className="w-full h-full" />}>
-      <Canvas
-        frameloop='demand'
-        shadows
-        dpr={[1, 2]}
-        camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls
-            enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
-          />
-          <Computers isMobile={isMobile} />
-        </Suspense>
+    <SafeCanvas fallback={<div className="w-full h-full" />}>
+      <ErrorBoundary fallback={<div className="w-full h-full" />}>
+        <Canvas
+          frameloop='demand'
+          shadows
+          dpr={[1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers isMobile={isMobile} />
+          </Suspense>
 
-        <Preload all />
-      </Canvas>
-    </ErrorBoundary>
+          <Preload all />
+        </Canvas>
+      </ErrorBoundary>
+    </SafeCanvas>
   );
 };
 

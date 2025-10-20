@@ -10,6 +10,7 @@ import {
 
 import CanvasLoader from "../Loader";
 import ErrorBoundary from "../ErrorBoundary";
+import SafeCanvas from "./SafeCanvas";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -46,25 +47,29 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  return (
-    <ErrorBoundary fallback={
-      <div className="w-20 h-20 flex items-center justify-center bg-tertiary rounded-full">
-        <img src={icon} alt="tech" className="w-12 h-12 object-contain" />
-      </div>
-    }>
-      <Canvas
-        frameloop='always'
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} />
-          <Ball imgUrl={icon} />
-        </Suspense>
+  const fallback = (
+    <div className="w-20 h-20 flex items-center justify-center bg-tertiary rounded-full">
+      <img src={icon} alt="tech" className="w-12 h-12 object-contain" />
+    </div>
+  );
 
-        <Preload all />
-      </Canvas>
-    </ErrorBoundary>
+  return (
+    <SafeCanvas fallback={fallback}>
+      <ErrorBoundary fallback={fallback}>
+        <Canvas
+          frameloop='always'
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls enableZoom={false} />
+            <Ball imgUrl={icon} />
+          </Suspense>
+
+          <Preload all />
+        </Canvas>
+      </ErrorBoundary>
+    </SafeCanvas>
   );
 };
 
