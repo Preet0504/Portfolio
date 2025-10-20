@@ -1,9 +1,7 @@
 import React from "react";
-import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -19,68 +17,54 @@ const ProjectCard = ({
   return (
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      initial={{ scale: 0, rotateY: -180 }}
-      animate={{ 
-        scale: 1, 
-        rotateY: 0,
-        y: [0, -10, 0],
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ 
+        y: -10,
+        transition: { duration: 0.3 }
       }}
-      transition={{
-        scale: { duration: 0.8, ease: "backOut" },
-        rotateY: { duration: 0.8, ease: "easeOut" },
-        y: { 
-          duration: 3 + index * 0.5, 
-          repeat: Infinity, 
-          ease: "easeInOut",
-          delay: 0.8
-        },
-      }}
+      className='group relative'
     >
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
-          />
-
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
+      <div className='bg-gradient-to-br from-purple-600 to-pink-600 p-[1px] rounded-2xl sm:w-[360px] w-full'>
+        <div 
+          onClick={() => window.open(source_code_link, "_blank")}
+          className='bg-tertiary p-6 rounded-2xl cursor-pointer hover:bg-tertiary/90 transition-all duration-300'
+        >
+          <div className='relative w-full h-[230px] mb-5 rounded-2xl overflow-hidden'>
+            <div className='absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:opacity-0 transition-opacity duration-300'></div>
+            <img
+              src={image}
+              alt='project_image'
+              className='w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300'
+            />
+            
+            <div className='absolute top-3 right-3 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full'>
+              <span className='text-white text-sm font-semibold'>View Project →</span>
             </div>
           </div>
-        </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
-        </div>
-
-        <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
+          <div>
+            <h3 className='text-white font-bold text-[24px] group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300'>
+              {name}
+            </h3>
+            <p className='mt-3 text-secondary text-[14px] leading-relaxed'>
+              {description}
             </p>
-          ))}
+          </div>
+
+          <div className='mt-5 flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <span
+                key={`${name}-${tag.name}`}
+                className={`text-[12px] ${tag.color} bg-black/30 px-3 py-1 rounded-full font-medium`}
+              >
+                #{tag.name}
+              </span>
+            ))}
+          </div>
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

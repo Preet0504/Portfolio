@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -42,7 +41,9 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <div className='w-9 h-9 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center'>
+            <span className='text-white font-bold text-xl'>P</span>
+          </div>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Preet Patel &nbsp;
             <span className='sm:block hidden'> | University of Illinois Chicago</span>
@@ -64,12 +65,14 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+          <div
+            className='w-[28px] h-[28px] flex flex-col justify-center gap-1 cursor-pointer'
             onClick={() => setToggle(!toggle)}
-          />
+          >
+            <div className={`h-0.5 bg-white transition-all ${toggle ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+            <div className={`h-0.5 bg-white transition-all ${toggle ? 'opacity-0' : ''}`}></div>
+            <div className={`h-0.5 bg-white transition-all ${toggle ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
+          </div>
 
           <div
             className={`${
