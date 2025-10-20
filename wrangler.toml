@@ -1,0 +1,10 @@
+# wrangler.toml
+name = "preetportfolio"
+compatibility_date = "2025-10-20" 
+
+# Add the 'main' field as an empty script to satisfy the dependency
+# This tells Wrangler, "Yes, I know you expect a worker script, but ignore it."
+main = "src/main.jsx" 
+
+[site]
+bucket = "./dist"

@@ -1,25 +1,3 @@
-import {
-  mobile,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  carrent,
-  jobit,
-  tripguide,
-} from "../assets";
-
 export const navLinks = [
   {
     id: "about",
@@ -42,19 +20,19 @@ export const navLinks = [
 const services = [
   {
     title: "Full-Stack Development",
-    icon: web,
+    // icon: web,
   },
   {
     title: "Cloud Computing",
-    icon: mobile,
+    // icon: mobile,
   },
   {
     title: "Data Science & AI",
-    icon: backend,
+    // icon: backend,
   },
   {
     title: "Product Development",
-    icon: creator,
+    // icon: creator,
   },
 ];
 
@@ -62,121 +40,121 @@ const technologies = {
   "Languages": [
     {
       name: "Python",
-      icon: javascript,
+      // icon: javascript,
     },
     {
       name: "JavaScript",
-      icon: javascript,
+      // icon: javascript,
     },
     {
       name: "TypeScript",
-      icon: typescript,
+      // icon: typescript,
     },
     {
       name: "Java",
-      icon: reactjs,
+      // icon: reactjs,
     },
     {
       name: "Go",
-      icon: nodejs,
+      // icon: nodejs,
     },
     {
       name: "C/C++",
-      icon: html,
+      // icon: html,
     },
     {
       name: "R",
-      icon: redux,
+      // icon: redux,
     },
   ],
   "Frameworks & Libraries": [
     {
       name: "React.js",
-      icon: reactjs,
+      // icon: reactjs,
     },
     {
       name: "Node.js",
-      icon: nodejs,
+      // icon: nodejs,
     },
     {
       name: "Next.js",
-      icon: reactjs,
+      // icon: reactjs,
     },
     {
       name: "Flask",
-      icon: nodejs,
+      // icon: nodejs,
     },
     {
       name: "Django",
-      icon: nodejs,
+      // icon: nodejs,
     },
     {
       name: "FastAPI",
-      icon: nodejs,
+      // icon: nodejs,
     },
     {
       name: "TensorFlow",
-      icon: tailwind,
+      // icon: tailwind,
     },
     {
       name: "PyTorch",
-      icon: tailwind,
+      // icon: tailwind,
     },
   ],
   "Cloud & DevOps": [
     {
       name: "AWS",
-      icon: backend,
+      // icon: backend,
     },
     {
       name: "GCP",
-      icon: backend,
+      // icon: backend,
     },
     {
       name: "Azure",
-      icon: backend,
+      // icon: backend,
     },
     {
       name: "Docker",
-      icon: docker,
+      // icon: docker,
     },
     {
       name: "Kubernetes",
-      icon: docker,
+      // icon: docker,
     },
     {
       name: "Git",
-      icon: git,
+      // icon: git,
     },
   ],
   "Data & Analytics": [
     {
       name: "Hadoop",
-      icon: mongodb,
+      // icon: mongodb,
     },
     {
       name: "Spark",
-      icon: mongodb,
+      // icon: mongodb,
     },
     {
       name: "Kafka",
-      icon: mongodb,
+      // icon: mongodb,
     },
     {
       name: "PowerBI",
-      icon: figma,
+      // icon: figma,
     },
     {
       name: "Tableau",
-      icon: figma,
+      // icon: figma,
     },
     {
       name: "MongoDB",
-      icon: mongodb,
+      // icon: mongodb,
     },
     {
       name: "PostgreSQL",
-      icon: mongodb,
+      // icon: mongodb,
     },
   ],
 };
@@ -302,7 +280,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    // image: carrent,
     source_code_link: "https://github.com/Preet0504",
   },
   {
@@ -323,7 +301,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    // image: jobit,
     source_code_link: "https://github.com/Preet0504",
   },
   {
@@ -344,7 +322,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    // image: tripguide,
     source_code_link: "https://github.com/Preet0504",
   },
 ];
