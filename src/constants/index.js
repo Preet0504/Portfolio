@@ -60,43 +60,89 @@ const services = [
 ];
 
 const technologies = {
-  "Full-Stack Development": [
+  "Languages": [
     {
-      name: "TypeScript",
+      name: "Python",
       icon: javascript,
     },
     {
-      name: "React JS",
+      name: "JavaScript",
+      icon: javascript,
+    },
+    {
+      name: "TypeScript",
+      icon: typescript,
+    },
+    {
+      name: "Java",
       icon: reactjs,
     },
     {
-      name: "Node JS",
+      name: "Go",
       icon: nodejs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "C/C++",
+      icon: html,
     },
     {
-      name: "Three JS",
-      icon: mongodb,
-    },
-    {
-      name: "Astro",
-      icon: mongodb,
-    },
-    {
-      name: "Express JS",
-      icon: mongodb,
-    },
-    {
-      name: "Angular JS",
-      icon: mongodb,
+      name: "R",
+      icon: redux,
     },
   ],
-  "Cloud Computing": [
+  "Frameworks & Libraries": [
+    {
+      name: "React.js",
+      icon: reactjs,
+    },
+    {
+      name: "Node.js",
+      icon: nodejs,
+    },
+    {
+      name: "Next.js",
+      icon: reactjs,
+    },
+    {
+      name: "Flask",
+      icon: nodejs,
+    },
+    {
+      name: "Django",
+      icon: nodejs,
+    },
+    {
+      name: "FastAPI",
+      icon: nodejs,
+    },
+    {
+      name: "TensorFlow",
+      icon: tailwind,
+    },
+    {
+      name: "PyTorch",
+      icon: tailwind,
+    },
+  ],
+  "Cloud & DevOps": [
+    {
+      name: "AWS",
+      icon: backend,
+    },
+    {
+      name: "GCP",
+      icon: backend,
+    },
+    {
+      name: "Azure",
+      icon: backend,
+    },
     {
       name: "Docker",
+      icon: docker,
+    },
+    {
+      name: "Kubernetes",
       icon: docker,
     },
     {
@@ -104,24 +150,34 @@ const technologies = {
       icon: git,
     },
   ],
-  "Data Science & AI": [
+  "Data & Analytics": [
     {
-      name: "Python",
-      icon: javascript, // Using JavaScript icon as placeholder for Python
+      name: "Hadoop",
+      icon: mongodb,
     },
     {
-      name: "Machine Learning",
-      icon: backend, // Using backend icon as placeholder
+      name: "Spark",
+      icon: mongodb,
     },
-  ],
-  "Tools and Technologies": [
     {
-      name: "Figma",
+      name: "Kafka",
+      icon: mongodb,
+    },
+    {
+      name: "PowerBI",
       icon: figma,
     },
     {
-      name: "Three JS",
-      icon: threejs,
+      name: "Tableau",
+      icon: figma,
+    },
+    {
+      name: "MongoDB",
+      icon: mongodb,
+    },
+    {
+      name: "PostgreSQL",
+      icon: mongodb,
     },
   ],
 };
@@ -191,67 +247,67 @@ research problems.",
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Distributed Analytics Pipeline",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Built a distributed analytics pipeline over 600+ research papers using Hadoop and AWS EMR, reducing data retrieval latency by 2.5× and memory usage by 30%. Designed Spark-based clustering and anomaly detection modules to identify topic patterns and emerging trends.",
     tags: [
       {
-        name: "react",
+        name: "hadoop",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "aws-emr",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "spark",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Preet0504",
   },
   {
-    name: "Job IT",
+    name: "AI College Finder Platform",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Developed a data-backed recommendation system achieving 95% matching accuracy between student profiles and college outcomes using GPT-4 embeddings. Engineered data pipelines with Selenium and Beautiful Soup to extract datasets from 1,200+ college websites.",
     tags: [
       {
-        name: "react",
+        name: "gpt-4",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "flask",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "powerbi",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Preet0504",
   },
   {
-    name: "Trip Guide",
+    name: "RAND-SLA: Bayesian Structure Learning",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Designed a Bayesian causal inference framework using randomized conditioning to accelerate network structure learning, cutting computation time by 34% while maintaining accuracy. Applied results to predictive analytics pipelines for decision-support systems.",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "scikit-learn",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "pandas",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Preet0504",
   },
 ];
 
