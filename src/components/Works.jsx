@@ -35,7 +35,8 @@ const ProjectCard = ({
             <div className='absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:opacity-0 transition-opacity duration-300'></div>
             <img
               src={image}
-              alt='project_image'
+              alt={`${name} project screenshot`}
+              loading="lazy"
               className='w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300'
             />
             
@@ -71,10 +72,10 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <section aria-labelledby="projects-heading">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 id="projects-heading" className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -95,7 +96,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

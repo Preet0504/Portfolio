@@ -65,12 +65,12 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-    <>
+    <section aria-labelledby="experience-heading">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 id="experience-heading" className={`${styles.sectionHeadText} text-center`}>
           Work Experience.
         </h2>
       </motion.div>
@@ -85,7 +85,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </section>
   );
 };
 

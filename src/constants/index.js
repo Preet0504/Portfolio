@@ -185,7 +185,7 @@ const experiences = [
   {
     title: "Product Development Intern",
     company_name: "yourEDUGATOR",
-    icon: starbucks,
+    // icon: starbucks,
     iconBg: "#383E56",
     date: "May 2025 - August 2025",
     points: [
@@ -202,7 +202,7 @@ research, brainstormed with the CEO in making strategic decisions.",
   {
     title: "Research Intern",
     company_name: "Techsture Technologies",
-    icon: tesla,
+    // icon: tesla,
     iconBg: "#E6DEDD",
     date: "May 2024 - August 2024",
     points: [
@@ -216,7 +216,7 @@ reliability across vehicular networks.",
   {
     title: "Research Scholar",
     company_name: "MICxN Lab",
-    icon: shopify,
+    // icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2024 - April 2025",
     points: [
@@ -231,7 +231,7 @@ research problems.",
   {
     title: "Teaching Assistant",
     company_name: "Ahmedabad University",
-    icon: meta,
+    // icon: meta,
     iconBg: "#E6DEDD",
     date: "August 2024 - March 2025",
     points: [

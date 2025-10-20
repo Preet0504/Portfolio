@@ -65,12 +65,12 @@ const VolunteeringCard = ({ activity }) => {
 
 const Volunteering = () => {
   return (
-    <>
+    <section aria-labelledby="volunteering-heading">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           Giving back to the community
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 id="volunteering-heading" className={`${styles.sectionHeadText} text-center`}>
           Volunteering & Leadership.
         </h2>
       </motion.div>
@@ -85,7 +85,7 @@ const Volunteering = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </section>
   );
 };
 

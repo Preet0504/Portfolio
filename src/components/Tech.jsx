@@ -39,10 +39,10 @@ const SkillBadge = ({ name, index }) => {
 
 const Tech = () => {
   return (
-    <>
+    <section aria-labelledby="skills-heading">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I know</p>
-        <h2 className={styles.sectionHeadText}>Skills.</h2>
+        <h2 id="skills-heading" className={styles.sectionHeadText}>Skills.</h2>
       </motion.div>
       
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12'>
@@ -70,7 +70,7 @@ const Tech = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
