@@ -22,9 +22,17 @@ const Tech = () => {
             <div className='flex flex-wrap justify-center gap-4'>
               {techs.map((technology, index) => (
                 <div key={technology.name} className='flex flex-col items-center'>
-                  <div className='w-20 h-20 mb-2'>
-                    <BallCanvas icon={technology.icon} />
-                  </div>
+                  {technology.icon ? (
+                    <div className='w-20 h-20 mb-2'>
+                      <BallCanvas icon={technology.icon} />
+                    </div>
+                  ) : (
+                    <div className='w-20 h-20 mb-2 flex items-center justify-center bg-tertiary rounded-full'>
+                      <span className='text-white text-2xl font-bold'>
+                        {technology.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                   <p className='text-white text-sm text-center max-w-[80px] leading-tight'>
                     {technology.name}
                   </p>
@@ -37,5 +45,5 @@ const Tech = () => {
     </>
   );
 };
+
 export default SectionWrapper(Tech, "");
-// r(Tech, "");

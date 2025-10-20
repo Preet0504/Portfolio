@@ -33,12 +33,20 @@ const ProjectCard = ({
         >
           <div className='relative w-full h-[230px] mb-5 rounded-2xl overflow-hidden'>
             <div className='absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:opacity-0 transition-opacity duration-300'></div>
-            <img
-              src={image}
-              alt={`${name} project screenshot`}
-              loading="lazy"
-              className='w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300'
-            />
+            {image ? (
+              <img
+                src={image}
+                alt={`${name} project screenshot`}
+                loading="lazy"
+                className='w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300'
+              />
+            ) : (
+              <div className='w-full h-full bg-gradient-to-br from-purple-900/40 to-pink-900/40 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <span className='text-white text-6xl font-bold opacity-20'>
+                  {name.charAt(0)}
+                </span>
+              </div>
+            )}
             
             <div className='absolute top-3 right-3 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full'>
               <span className='text-white text-sm font-semibold'>View Project →</span>
