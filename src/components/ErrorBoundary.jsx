@@ -11,7 +11,9 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.log('3D Canvas Error:', error, errorInfo);
+    if (import.meta.env.DEV) {
+      console.log('3D Canvas Error:', error, errorInfo);
+    }
   }
 
   render() {
