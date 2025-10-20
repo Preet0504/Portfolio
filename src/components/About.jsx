@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -11,6 +11,29 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      initial={{ scale: 0, rotateX: -90 }}
+      animate={{ 
+        scale: 1, 
+        rotateX: 0,
+        y: [0, -8, 0],
+        x: [0, 5, 0],
+      }}
+      transition={{
+        scale: { duration: 0.6, ease: "backOut" },
+        rotateX: { duration: 0.6, ease: "easeOut" },
+        y: { 
+          duration: 4 + index * 0.3, 
+          repeat: Infinity, 
+          ease: "easeInOut",
+          delay: 0.6
+        },
+        x: { 
+          duration: 4 + index * 0.3, 
+          repeat: Infinity, 
+          ease: "easeInOut",
+          delay: 0.6
+        },
+      }}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
@@ -47,11 +70,9 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I’m a Computer Science student passionate about AI, cloud computing, and web development. 
+        I love building scalable, data-driven solutions that tackle real-world problems, combining intelligent
+        systems, distributed systems, and clean design to create applications that are both powerful and practical.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

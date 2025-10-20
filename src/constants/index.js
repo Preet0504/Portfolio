@@ -42,159 +42,152 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Development",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Cloud Computing",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Data Science & AI",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Product Development",
     icon: creator,
   },
 ];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-];
+const technologies = {
+  "Full-Stack Development": [
+    {
+      name: "TypeScript",
+      icon: javascript,
+    },
+    {
+      name: "React JS",
+      icon: reactjs,
+    },
+    {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "MongoDB",
+      icon: mongodb,
+    },
+    {
+      name: "Three JS",
+      icon: mongodb,
+    },
+    {
+      name: "Astro",
+      icon: mongodb,
+    },
+    {
+      name: "Express JS",
+      icon: mongodb,
+    },
+    {
+      name: "Angular JS",
+      icon: mongodb,
+    },
+  ],
+  "Cloud Computing": [
+    {
+      name: "Docker",
+      icon: docker,
+    },
+    {
+      name: "Git",
+      icon: git,
+    },
+  ],
+  "Data Science & AI": [
+    {
+      name: "Python",
+      icon: javascript, // Using JavaScript icon as placeholder for Python
+    },
+    {
+      name: "Machine Learning",
+      icon: backend, // Using backend icon as placeholder
+    },
+  ],
+  "Tools and Technologies": [
+    {
+      name: "Figma",
+      icon: figma,
+    },
+    {
+      name: "Three JS",
+      icon: threejs,
+    },
+  ],
+};
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Product Development Intern",
+    company_name: "yourEDUGATOR",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "May 2025 - August 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked closely with the CEO to build an AI-powered IELTS Speaking module; integrated Azure Speech SDK, \
+      ElevenLabs STT, OpenAI tts-1, elevating speaking practice throughput by 3×.",
+      "Built ETL pipelines processing JSON-schema datasets for Reading, Listening, and Writing; used OpenAI API and \
+DALL-E 3 to auto-generate Writing Task-1 diagrams, boosting question bank coverage by 120%",
+      "Developed RAG-based internal assistant (LangChain + OpenAI) indexing 200+ design docs, reducing knowledge lookup \
+time by 50%.",
+      "Crafted investor pitch deck, used PowerBI and Tableau to visualize company’s performance, performed market \
+research, brainstormed with the CEO in making strategic decisions.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Research Intern",
+    company_name: "Techsture Technologies",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "May 2024 - August 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Deployed real-time C-V2X-based Pedestrian Detection and Alert Dissemination ITS testbed; validated 10+ scenarios \
+demonstrating the robustness; achieved <10ms latency with multi-threaded UDP + SNMP monitoring.",
+      "Developed and automated TCP/DNS network pipeline for server–RSU and RSU-OBU alerts, streamlining data flow \
+reliability across vehicular networks.",
+      "Used OpenStreetMap and JavaFX to develop a dashboard to track the vehicle’s location and display alert messages.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Research Scholar",
+    company_name: "MICxN Lab",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jan 2024 - April 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Supported faculty and peers by reviewing research papers, summarizing findings, and maintaining organized notes.",
+      "Assisted with event coordination for technical workshops, including preparing materials and guiding participants.",
+      "Collaborated with colleagues across disciplines, demonstrating adaptability and strong interpersonal skills.",
+      "Conducted 5+ technical workshops in other universities on advanced topics, showing my tutoring skills.",
+      "Mentored more than 20 junior research scholars on how to approach research and face the challenges while solving \
+research problems.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
+    title: "Teaching Assistant",
+    company_name: "Ahmedabad University",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "August 2024 - March 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Artificial Intelligence: Assisted professor and a class of 40, including BTech, BSc, MTech, and PhD students.",
+      "Embedded System Designs: Managed and evaluated assignments and projects of a class of 130 students.",
+      "Predictive Analytics for Business: Helped a class of 60, including BBA and BTech students, with their conceptual queries.",
+      "Computer Networks: Currently managing a class of 130 students. Providing C tutorials on file management in lab sessions.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
 const projects = [
   {
@@ -262,4 +255,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
