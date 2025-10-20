@@ -35,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "volunteering",
+    title: "Volunteering",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -245,6 +249,45 @@ research problems.",
 ];
 
 
+const volunteering = [
+  {
+    title: "Secretary",
+    organization: "Anime Community at Ahmedabad University",
+    date: "2024",
+    points: [
+      "Organized and managed 20+ community events including workshops, screenings, and cultural activities.",
+      "Handled registrations, financial reports, and budget planning with data-driven insights for decision-making.",
+      "Collaborated with university clubs and student organizations to drive community growth and engagement.",
+      "Increased community membership by 150% through strategic outreach and marketing initiatives.",
+      "Provided administrative support and maintained detailed records for community activities and finances.",
+    ],
+  },
+  {
+    title: "Student Ambassador",
+    organization: "Blockheads Cafe",
+    date: "2024",
+    points: [
+      "Led awareness campaigns at Ahmedabad University to promote cafe products and services.",
+      "Interacted with 100+ customers to gather feedback and provide actionable insights to management.",
+      "Developed and executed marketing strategies to increase brand visibility on campus.",
+      "Analyzed customer preferences and trends to help optimize product offerings.",
+      "Built strong relationships between the organization and student community.",
+    ],
+  },
+  {
+    title: "Volunteer",
+    organization: "Jivdaya Charitable Trust",
+    date: "2022",
+    points: [
+      "Assisted workers with day-to-day operations including cleaning, food preparation, and medicine distribution.",
+      "Led and coordinated volunteer teams to perform tasks efficiently and safely.",
+      "Participated in animal care and feeding activities at the shelter.",
+      "Demonstrated commitment to animal welfare and community service.",
+      "Developed leadership and teamwork skills through hands-on volunteer coordination.",
+    ],
+  },
+];
+
 const projects = [
   {
     name: "Distributed Analytics Pipeline",
@@ -311,4 +354,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, technologies, experiences, volunteering, projects };

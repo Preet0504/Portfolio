@@ -13,6 +13,10 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-padding-top: 100px;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
