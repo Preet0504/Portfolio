@@ -8,6 +8,7 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5000,
     strictPort: true,
+    allowedHosts: ['1181200e-76e0-450b-b9d8-933124036e45-00-2hd3quurolsqd.worf.replit.dev'],
     hmr: {
       clientPort: 443,
       protocol: 'wss'
