@@ -41,6 +41,7 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -63,6 +64,10 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  if (hasError) {
+    return null;
+  }
+
   return (
     <Canvas
       frameloop='always'
@@ -70,6 +75,13 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      onCreated={({ gl }) => {
+        gl.domElement.addEventListener('webglcontextlost', (event) => {
+          event.preventDefault();
+          console.log('WebGL context lost. Hiding 3D model.');
+          setHasError(true);
+        });
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
